@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body,
+* {
+  /* font-family: "Dela Gothic One"; */
+  font-family: "Nunito";
+  /* background-color: aqua; */
+}
+.app {
+  background: url("../src/assets/images/1150828.webp");
+  background-size: cover;
+}
+.bg-cart {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(3.5px);
+  -webkit-backdrop-filter: blur(3.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.spinner {
+  /* margin: auto; */
+  width: 50px;
+  height: 30px;
+}
+
+.spinner > div {
+  background: #ccc;
+  height: 100%;
+  width: 3px;
+  float: left;
+  margin: 0 1px;
+  animation: stretch 2s infinite;
+
+  animation-timing-function: cubic-bezier(0.62, 0.28, 0.23, 0.99);
+  border-radius: 5px;
+}
+
+.spinner .r1 {
+  animation-delay: -1s;
+}
+
+.spinner .r2 {
+  animation-delay: -0.9s;
+}
+
+.spinner .r3 {
+  animation-delay: -0.8s;
+}
+
+.spinner .r4 {
+  animation-delay: -0.7s;
+}
+
+.spinner .r5 {
+  animation-delay: -0.6s;
+}
+
+@keyframes stretch {
+  0%,
+  20%,
+  49% {
+    transform: scaleY(0.4);
+
+    background-color: #ccc;
+  }
+
+  10% {
+    transform: scaleY(1);
+    background-color: #ccc;
+  }
+
+  50%,
+  70%,
+  100% {
+    transform: scaleY(0.4);
+
+    background-color: #ccc;
+  }
+
+  60% {
+    transform: scaleY(1);
+    background-color: #ccc;
+  }
+}
