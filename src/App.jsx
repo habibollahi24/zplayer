@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import { FaPlay, FaPause, FaBackward, FaForward } from "react-icons/fa";
 
 import music from "./assets/audios/Ali Mir - Alan Kojaee (320).mp3";
-import NEG from "./assets/images/z.jpg";
+import NEG from "./assets/images/za.jpg";
 
 function App() {
   const [playMusic, setPlayMusic] = useState(false);
@@ -52,20 +52,20 @@ function App() {
     setAudioProgress(isNaN(progress) ? 0 : progress);
   };
   return (
-    <div className="app text-white container max-w-[450px]  mx-auto border-2 p-10 h-screen overflow-hidden    bg-gray-700">
+    <div className="app text-white container max-w-[450px]  mx-auto border-2 px-2 py-10 h-screen overflow-hidden    bg-gray-700">
       <div className="flex flex-col h-full   py-8 bg-cart ">
-        <header className="p-4">
-          <p className="text-4xl font-bold"> Music Player </p>
+        <header className="p-4 text-center">
+          <p className="text-4xl font-bold "> Music Player </p>
           <Spinner state={playMusic ? "running" : "paused"} />
         </header>
         <div className="h-[400px]  mt-5 flex flex-col justify-start items-center">
           <img
             src={NEG}
             alt="neg"
-            className={`object-cover transition-all duration-1000 ${
+            className={`object-cover transition-all duration-1000  ${
               playMusic
                 ? "w-full h-full rounded-3xl"
-                : " w-60 h-60 rounded-full"
+                : " w-52 h-52 rounded-full"
             } `}
           />
           <p className="title mt-2">kojaei ...</p>
